@@ -40,14 +40,14 @@ renderTable();
 hel.getEle("btnThemNguoiDung").onclick = () => {
 
     // test
-    document.getElementById("TaiKhoan").value = "MINH678";
-    document.getElementById("HoTen").value = "NGUYỄN VĂN MINH";
-    document.getElementById("Email").value = "pnlinh679@gmail.com";
-    document.getElementById("MatKhau").value = "@Teo87";
-    document.getElementById("HinhAnh").value = "teacher_3.jpg";
-    document.getElementById("loaiNguoiDung").value = "GV";
-    document.getElementById("loaiNgonNgu").value = "FRENCH";
-    document.getElementById("MoTa").value = "Xin chao cac tinh yeu minh den tu hàn quố";
+    document.getElementById("TaiKhoan").value = "";
+    document.getElementById("HoTen").value = "";
+    document.getElementById("Email").value = "";
+    document.getElementById("MatKhau").value = "";
+    document.getElementById("HinhAnh").value = "Nhập vào hình ảnh";
+    document.getElementById("loaiNguoiDung").value = "Chọn loại người dùng";
+    document.getElementById("loaiNgonNgu").value = "Chọn ngôn ngữ";
+    document.getElementById("MoTa").value = "";
 }
 
 hel.getEle("add").onclick = () => {
@@ -60,7 +60,7 @@ hel.getEle("add").onclick = () => {
     const image = val.vali("HinhAnh", /^[\w\.]+$/, "Hình ảnh không để trống");
     const person = val.vali("loaiNguoiDung", /[^Chọn loại người dùng]/, "Phải chọn");
     const language = val.vali("loaiNgonNgu", /[^Chọn ngôn ngữ]/, "Phải chọn");
-    const description = val.vali("MoTa", /^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" + "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" + "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s\r\n]{10,60}$/, "Không để trống, không vượt quá 60 ký tự");
+    const description = val.vali("MoTa", /^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" + "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" + "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s\r\n\,\.]{1,60}$/, "Không để trống, không vượt quá 60 ký tự");
     flat &&= acount;
     flat &&= name;
     flat &&= email;
