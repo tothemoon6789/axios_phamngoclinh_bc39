@@ -1,0 +1,9 @@
+@mixin social {
+  i {
+    color: black;
+    margin-left: 5px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

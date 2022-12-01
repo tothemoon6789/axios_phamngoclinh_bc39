@@ -1,0 +1,139 @@
+.wrap-header {
+  background-image: url("../images/yellow_top_wave_01.png"),
+    url("../images/hero_team.png"), url("../images/Violet_top_left_wave.png");
+  background-position: left top, right, bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, auto, contain;
+  height: 120vh;
+  transition: all 0.5s;
+  #myNavbar {
+    font-weight: 600;
+    font-size: 0.8rem;
+   
+    .social {
+      @include social;
+    }
+    button {
+      @include button(20px);
+    }
+    .wraper-nav {
+     
+      .nav-item {
+        margin-right: 30px;
+        padding-bottom: 20px;
+        
+        
+        .nav-link {
+          color: black;
+         
+        }
+      }
+      .dropdown-menu {
+        /* background-color: yellow; */
+        padding: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19);
+        border: none;
+        border-radius: 0px;
+        li {
+          // color: black;
+          padding: 8px;
+          font-size: 0.6rem;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        hr {
+          margin: 0;
+          padding: 0;
+        }
+        ::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          
+        
+          left: 10%;
+          transform: translateY(-50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .content {
+    transition: all 0.5s;
+    #btnOpen {
+      background-color: transparent;
+      border: none;
+    }
+    .header-content {
+      margin-top: 100px !important;
+      .about-us {
+        color: $primary-color;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .about-us-content {
+        color: black;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .navbar-to-right {
+    transform: translateX(0px) !important;
+  }
+}
+.mgleft {
+  margin-left: 300px;
+  /* overflow: hidden; */
+}
+.overflow {
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  #myNavbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: $on-primary-color;
+    transform: translateX(-300px);
+    transition: all 0.5s;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: center !important;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 992px) {
+  .mgleft {
+    margin-left: 0px;
+    /* overflow: auto; */
+  }
+  .overflow {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+#goadmin {
+  @include button(20px);
+  text-decoration: none;
+}

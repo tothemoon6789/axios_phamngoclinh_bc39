@@ -1,0 +1,67 @@
+.footer {
+    background-image: url("../images/footer_background.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    color: white;
+    h5 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .address {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        i {
+            margin-right: 10px;
+
+        }
+        span {
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+    }
+    .social {
+        @include social;
+        i {
+
+            color: white;
+            &:hover {
+                color: black;
+                cursor: pointer;
+                
+            }
+        }
+    }
+    ul {
+        li {
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    input {
+        border-radius: 20px;
+        background-color: $primary-color;
+        color: white !important;
+        &:focus {
+            background-color: $primary-color;
+        }
+        &::placeholder {
+            color: white
+        }
+    }
+    button {
+        @include button(20px);
+        width: 100%;
+        margin-top: 5px;
+     
+    }
+}

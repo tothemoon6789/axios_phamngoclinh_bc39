@@ -1,0 +1,61 @@
+/* looking */
+.looking {
+  background-image: url("../images/accent_bottom_wave_01.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 100px;
+  
+  form {
+    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.19);
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    .form-group {
+        width: 45%;
+      position: relative;
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.9rem;
+        color: $primary-color;
+      }
+      input {
+        padding-left: 2.3rem;
+       
+        border-radius: 40px;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+
+        &:focus {
+        }
+      }
+      select {
+        padding-left: 2.3rem;
+        border-radius: 40px;
+      }
+      .icon-text-area {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.9rem;
+        color: $primary-color;
+      }
+      textarea {
+        padding-left: 2.3rem;
+        border-radius: 20px;
+        padding-bottom: 1.6rem;
+        &:focus {
+        }
+      }
+      
+    }
+    button {
+        @include button(40px);
+        padding: 15px 70px;
+        font-weight: 700;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+  }
+}
